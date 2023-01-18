@@ -7,55 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valuxe-main</title>
     <link rel="stylesheet" href="./main.css">
+    
+
    <style>
-    #bacgroundimages1{
+    #FAQ{
+       
+        background: #333;
+    }
+    #CONATAINER-1{
         
-        height: 500px;
-        width: 100%;
-        background-image: url('https://cb.scene7.com/is/image/Crate/cb_dHP_20230111_HeroV2?wid=1440&qlt=80&op_sharpen=1');
-      }
-      #bacgroundimages1>div{
-        width: 40%;
-        margin: auto;
-        text-align: center;
-        padding: 10px;
-      }
-      #bacgroundimages1 button{
-        font-size: 20px;
-        background-color:grey;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
         color: white;
-        border: none;
-      }
-      #bacgroundimages2>div{
-        width: 40%;
+        width: 80%;
         margin: auto;
-        text-align: center;
-        padding: 10px;
-        margin-right:0px ;
-      }
-      #bacgroundimages2 button{
-        font-size: 20px;
-        background-color:grey;
-        color: white;
-        border: none;
-      }
+        font-size: 10px;
+        gap: 10px;
+        text-align: start;
+        padding-top: 10px;
+    }
+    #CONATAINER-1 img{
+        width: 20%;
+    }
+    #CONATAINER-1>div{
+       
+
+    }
+    #CONATAINER-2{
       
-      #bacgroundimages2{
-        height: 800px;
-        width: 100%;
-        background-image: url('//cb.scene7.com/is/image/Crate/cb_dHP_20230110_Electrics?wid=1440&amp;qlt=90&amp;op_sharpen=1');
-      }
-      #bacgroundimages3{
-    width: 100%;
-      }
-      #bacgroundimages3>video{
-        width: 100%;
-      }
-      #bacgroundimages4>img{
-        width: 100%;
-        border: 2px solid teal;
-      }
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        color: white;
+        width: 80%;
+        margin: auto;
+        font-size: 10px;
+        gap: 10px;
+        text-align:start;
+        
+    }
+    #CONTAINER-2>div{
+        font-weight: 4px;
+    }
+    #CONATAINER-2 img{
+        width: 60%;
+    }
    </style>
+   
+
+
 </head>
 
 <body>
@@ -71,15 +70,14 @@
             </div>
             <div>
                 <a href="">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png?w=740&t=st=1674023400~exp=1674024000~hmac=df37923f1151945fc3de5188d8d92e9e5abb8a59954ecba91149e876db8234f4 "
+                    <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png?w=740&t=st=1674023400~exp=1674024000~hmac=df37923f1151945fc3de5188d8d92e9e5abb8a59954ecba91149e876db8234f4 "
                         alt="" class="profile"></a>
             </div>
             <div>
-                
+
                 <a href="">
-                    <img
-                    src="https://cdn-icons-png.flaticon.com/512/1251/1251022.png?w=740&t=st=1674022874~exp=1674023474~hmac=0cf8f33d6cd462c7ca1eb508440b35ef2d30ef18b1f43d2895c5e9af8c50b4e1 "
-                    alt="" class="cart"></a>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1251/1251022.png?w=740&t=st=1674022874~exp=1674023474~hmac=0cf8f33d6cd462c7ca1eb508440b35ef2d30ef18b1f43d2895c5e9af8c50b4e1 "
+                        alt="" class="cart"></a>
             </div>
             <div>
                 <a href="">
@@ -95,60 +93,182 @@
             </div>
         </div>
     </div>
- <div id="feature-bar-white">
-  <a href=""> <p> WEDDING OFFERS  </p></a>
-  <a href=""> <p> FREE DESIGN</p></a>
-  <a href=""> <p> TODAY'S OFFER</p></a>
-  <a href=""> <p>PRODUCT OF THE TODAY</p></a>
-  <a href=""> <p> IN STOCK</p></a>
-  <a href=""> <p> GUIDANCE TEAM</p></a>
-  <a href=""> <p> IN STOCK</p></a>
-  <a href=""> <p> SALE</p></a>
- </div>
+    <div id="feature-bar-white">
+        <a href="">
+            <p> WEDDING OFFERS </p>
+        </a>
+        <a href="">
+            <p> FREE DESIGN</p>
+        </a>
+        <a href="">
+            <p> TODAY'S OFFER</p>
+        </a>
+        <a href="">
+            <p>PRODUCT OF THE TODAY</p>
+        </a>
+        <a href="">
+            <p> IN STOCK</p>
+        </a>
+        <a href="">
+            <p> GUIDANCE TEAM</p>
+        </a>
+        <a href="">
+            <p> IN STOCK</p>
+        </a>
+        <a href="">
+            <p> SALE</p>
+        </a>
+    </div>
 
 
 
- <div id="feature-bar-black">
-    <a href=""> <h3> Furniture </h3></a>
-    <a href=""> <h3>Outdoor</h3></a>
-    <a href=""> <h3> Tabletop & Bar</h3></a>
-    <a href=""> <h3>Kitchen</h3></a>
-    <a href=""> <h3>Decor&Pillows</h3></a>
-    <a href=""> <h3>Rugs</h3></a>
-    <a href=""> <h3>Lighting</h3></a>
-    <a href=""> <h3>Gifts</h3></a>
-    <a href=""> <h3>Bedding & Bath</h3></a>
-   </div>
+    <div id="feature-bar-black">
+        <a href="">
+            <h3> Furniture </h3>
+        </a>
+        <a href="">
+            <h3>Outdoor</h3>
+        </a>
+        <a href="">
+            <h3> Tabletop & Bar</h3>
+        </a>
+        <a href="">
+            <h3>Kitchen</h3>
+        </a>
+        <a href="">
+            <h3>Decor&Pillows</h3>
+        </a>
+        <a href="">
+            <h3>Rugs</h3>
+        </a>
+        <a href="">
+            <h3>Lighting</h3>
+        </a>
+        <a href="">
+            <h3>Gifts</h3>
+        </a>
+        <a href="">
+            <h3>Bedding & Bath</h3>
+        </a>
+    </div>
 
 
     <div id="bacgroundimages1">
-      <div>
-        <h2> <b> the great living room refresh </b> </h3>
-            <button> <b> Shop from Here </b></button>
-         <p><i>“The Gather sectional feels relaxed yet
-            doesn't lose its shape or need fluffing.”
-            -Brenna</i></p>
-      
-         
-      </div>
+        <div>
+            <h2> <b> the great living room refresh </b> </h3>
+                <button> <b> Shop from Here </b></button>
+                <p><i>“The Gather sectional feels relaxed yet
+                        doesn't lose its shape or need fluffing.”
+                        -Brenna</i></p>
+
+
+        </div>
     </div>
     </div>
     <div id="bacgroundimages2">
         <div>
             <h2> <b> for the morning mix</b> </h3>
                 <button> <b> Shop from Here </b></button>
-          
-             
-          </div>
+
+
+        </div>
     </div>
     <div id="bacgroundimages3">
-     <video class="prm-video" autoplay="" muted="" loop="" aria-label="Shop Baby Registry" data-content-type="video" poster="//cb.scene7.com/is/image/Crate/cb_dHP_20230102_BabyRegistry_Poster?wid=1920&amp;qlt=50" crossorigin="anonymous" style="aspect-ratio: 1920 / 1080;">
-      <source src="https://s7d5.scene7.com/is/content/Crate/Video/cb_dHP_20230102_BabyRegistry.mp4">
-    </video>
+        <video class="prm-video" autoplay="" muted="" loop="" aria-label="Shop Baby Registry" data-content-type="video"
+            poster="//cb.scene7.com/is/image/Crate/cb_dHP_20230102_BabyRegistry_Poster?wid=1920&amp;qlt=50"
+            crossorigin="anonymous" style="aspect-ratio: 1920 / 1080;">
+            <source src="https://s7d5.scene7.com/is/content/Crate/Video/cb_dHP_20230102_BabyRegistry.mp4">
+        </video>
     </div>
-    <div id="bacgroundimages4">
-    <img src="./Screenshot 2023-01-18 210504.png" alt="">
+
+    <!-- FAQ -->
+    <div id="FAQ">
+        <div id="CONATAINER-1">
+            <div>
+                <div> <img src="./call.png" alt="">
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>Phone No:-0712-2552258381</p>
+                    <p>Mon-Fri:8am -8pm</p>
+                    <p>Sat-Sun:8am-7pm</p>
+                </div>
+            </div>
+            <div>
+                <div> <img src="./card.png" alt=""></div>
+                <div>
+                    <h4>Valuxe Credit Card</h4>
+                    <p>Earn Reward Dollars every time you shop* (excluding special financing purchases), plus get access
+                        to special offers and events.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./order.png" alt="">
+                </div>
+                <div>
+                    <h4>Order Tracking & Schedule Delivery</h4>
+                    <p>Find out when your online purchase will arrive or schedule a delivery.
+                        Track Your Order
+                        Schedule Delivery</p>
+                </div>
+            </div>
+            <div>
+                <img src="./&.png" alt="">
+                <h2>THE WEDDING REGISTRY</h2>
+            </div>
+        </div>
+        <hr>
+        <div id="CONATAINER-2">
+            <div>
+                <h4>Our Campany</h4>
+                <p>About us</p>
+                <p>Careers</p>
+                <p>Responsible design</p>
+                <p>store Location and Events</p>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <p>Customer Service</p>
+                <p>Account</p>
+                <p>Return Policy</p>
+                <p>Shipping Information</p>
+                <p>Email and Text Preferences</p>
+                <p>Gift Cards</p>
+                <p>Catalogs</p>
+                <p>Product Recalls</p>
+                <p>Accessibility Statement</p>
+                <p>CA Supply Chains Act</p>
+                <p>Do Not Sell My Personal Information</p>
+                <p>Cookie Settings</p>
+            </div>
+            <div>
+                <h4>Shopping App</h4>
+                <p>Try our View in Your Room feature, manage registries and save payment info.</p>
+                <img src="./apple.png" alt="">
+            </div>
+            <div>
+                <h4>Social Media</h4>
+                <img src="./social media.png" alt="">
+                <p>Show us your look with: </p>
+                <p>#CrateStyle</p>
+                <p>#CrateKidsStyle</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
     </div>
+
+
+
 </body>
 
 </html>
