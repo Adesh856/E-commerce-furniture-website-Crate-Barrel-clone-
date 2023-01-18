@@ -4,36 +4,42 @@
 body{
     margin: 0px;
     padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 img{
 width:20px;
 }
 #nav{
+    
 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 display: flex;
 justify-content: space-between;
-
+height: 70px;
 }
 #nav>div{
+   
 margin-right:20px ;
 display: flex;  
+align-items: center;
+
 }
 #nav>h1{
-font-size: 50px;
+font-size: 30px;
  margin-left:130px ;
- color: gray;
+ color: rgb(1, 1, 1);
 }
 #nav>div>div{
-
+  
 display: flex;
 align-items: center;
 margin-left: 20px;
+height: 50px;
 
 }
 #nav>:nth-child(1)>img{
-width:110px;
+width:100%;
+height: 70px;
 
-margin-top: 10px;
 }
 
 /* //features */
@@ -46,7 +52,6 @@ margin-top: 10px;
     font-size: 10px;
   }
   #feature-bar-white{
-      
       display: grid;
       grid-template-columns: repeat(8,1fr);
       width: 90%;
@@ -54,7 +59,6 @@ margin-top: 10px;
       margin-top: 10px;
   }
   #feature-bar-black{
-      
       display: grid;
       grid-template-columns: repeat(9,1fr);
       width: 100%;
@@ -70,3 +74,54 @@ margin-top: 10px;
       color: white;
       
     }
+
+/* HOME PAGE */
+#bacgroundimages1 {
+
+    height: 500px;
+    width: 100%;
+    background-image: url('https://cb.scene7.com/is/image/Crate/cb_dHP_20230111_HeroV2?wid=1440&qlt=80&op_sharpen=1');
+}
+
+#bacgroundimages1>div {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+#bacgroundimages1 button {
+    font-size: 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+}
+
+#bacgroundimages2>div {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    margin-right: 0px;
+}
+
+#bacgroundimages2 button {
+    font-size: 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+}
+
+#bacgroundimages2 {
+    height: 800px;
+    width: 100%;
+    background-image: url('//cb.scene7.com/is/image/Crate/cb_dHP_20230110_Electrics?wid=1440&amp;qlt=90&amp;op_sharpen=1');
+}
+
+#bacgroundimages3 {
+    width: 100%;
+}
+
+#bacgroundimages3>video {
+    width: 100%;
+}
