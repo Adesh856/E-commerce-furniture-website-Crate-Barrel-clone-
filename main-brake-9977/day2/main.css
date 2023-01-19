@@ -1,6 +1,8 @@
 /* nav */
 
-
+a{
+    text-decoration: none;
+}
 body{
     margin: 0px;
     padding: 0px;
@@ -10,7 +12,7 @@ img{
 width:20px;
 }
 #nav{
-    
+    position: static;
 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 display: flex;
 justify-content: space-between;
@@ -25,8 +27,9 @@ align-items: center;
 }
 #nav>h1{
 font-size: 30px;
- margin-left:130px ;
+ margin-left:152px ;
  color: rgb(1, 1, 1);
+
 }
 #nav>div>div{
   
@@ -58,22 +61,78 @@ height: 70px;
       margin: auto;
       margin-top: 10px;
   }
-  #feature-bar-black{
-      display: grid;
-      grid-template-columns: repeat(9,1fr);
-      width: 100%;
-      gap: 10px;
-      margin-top: 10px;
-      background: grey;
+  body {
+    margin: 0px;
+}
 
-  }
-  #feature-bar-black>a{
-      text-decoration: none;
-      font-size: 13px;
-      text-align: center;
-      color: white;
-      
-    }
+
+
+a {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.nav-area {
+    background: gray
+}
+
+.nav-area:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.nav-area ul {
+    list-style: none;
+    margin: 0;
+}
+
+.nav-area>ul>li {
+    float: left;
+    position: relative;
+}
+
+.nav-area ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 25px 15px 30px;
+    display: block;
+}
+
+.nav-area ul li:hover a {
+    background: rgba(0, 0, 0, 0.557)
+}
+
+.nav-area ul ul {
+    position: absolute;
+    padding: 0;
+    min-width: 160px;
+    display: none;
+    top: 100%;
+    left: 0;
+}
+
+.nav-area ul li:hover>ul {
+    display: block;
+}
+
+.nav-area ul ul li:hover a {
+    background: rgba(0, 0, 0, 0.351);
+}
+
+.nav-area ul ul li {
+    position: relative;
+}
+
+.nav-area ul ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.nav-area ul ul ul li:hover a {
+    background: #34495e;
+}
+
 
 /* HOME PAGE */
 #bacgroundimages1 {
@@ -92,11 +151,14 @@ height: 70px;
 
 #bacgroundimages1 button {
     font-size: 20px;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.367);
     color: white;
     border: none;
+    border-radius: 7px;
 }
-
+#bacgroundimages1 a{
+    color: white;
+}
 #bacgroundimages2>div {
     width: 40%;
     margin: auto;
@@ -107,9 +169,15 @@ height: 70px;
 
 #bacgroundimages2 button {
     font-size: 20px;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.367);
     color: white;
     border: none;
+    border-radius: 7px;
+    
+}
+#bacgroundimages2 a{
+    color: white;
+    text-align: center;
 }
 
 #bacgroundimages2 {
@@ -146,10 +214,6 @@ height: 70px;
 #CONATAINER-1 img{
     width: 20%;
 }
-#CONATAINER-1>div{
-   
-
-}
 #CONATAINER-2{
   
     display: grid;
@@ -167,4 +231,7 @@ height: 70px;
 }
 #CONATAINER-2 img{
     width: 60%;
+}
+#FAQ{
+    margin: 0px;
 }
