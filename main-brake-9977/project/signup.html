@@ -1,30 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUP</title>
-    <style>
-        label{
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up Page</title>
+  <style>
+    label {
+      padding-bottom: 10px;
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+      height: 100hv;
+      width: auto;
+      background-image: url("https://cb.scene7.com/is/image/Crate/BabylettoKwIvPRChrNWBs3QSSF22/$web_pdp_main_carousel_high$/220426110624/babyletto-kiwi-ivory-power-recliner-chair-with-natural-wood-base.jpg");
+
+    }
+
+    video {
+      width: 70%;
+      padding-left: 6px;
+
+    }
+
+    .cont {
+      display: flex;
+
+      width: 50%;
+      margin: auto;
+      align-items: center;
+      position: relative;
+      top: -26px;
+      background-color: gainsboro;
+    }
+
+    .cont>:nth-child(2)>div {
+
+      padding-top: 30px;
+      color: gray;
+      width: 100%;
+      text-align: center
+    }
+
+    .cont>div {
+
+      
+      padding: 40px;
+
+    }
+
+    .cont>:nth-child(2) {
+      background-image: url("https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjU4NjE4MTA1LjcwMjMxOTk5OTY3Ny5qcGVn.jpg?w=640&h=640&fit=cover");
+    }
+
+    .sgn {
+      border-radius: 6px;
+      font-size: 12px;
+      margin-left: 50px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-top: 10px;
+      border: none;
+      text-align: center;
+      padding: 5px 5px;
+      background-color: rgba(0, 0, 0, 0.738);
+     
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+      border: none;
+      padding: 7px 7px;
+      margin: 7px 7px;
+      border-radius: 7px;
+      border: 2px solid rgb(236, 233, 233);
+      font-size: 12px;
+      background-color: rgba(0, 0, 0, 0.738);
+      color: white;
+    }
+
+    #signup>h1 {
+      text-align: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+      width: 100%;
+    }
+   .log{
+
+    width: 40%;
+  justify-content: center;
+   }
+   .log>img{
+    width: 70px ;
+    height: 70px;
+   padding-left: 206px;
+   
+   }
+   .log>h1{
+    text-align: center;
+    padding-top: 10px;
+   }
+   input[type="submit"]{
+    margin:-3px 0px 52px 7px;
+}
+
+  </style>
 </head>
+
 <body>
-    <a href="./signin.html"></a>
-    <form action="">
+  <div style="margin:auto;" class="log">
+   
+    <img src="./Valuxe (3).png" alt="">
+    <h1>V&F</h1>
+  </div>
+  <div class="cont">
+    <div id="signup">
+      <h1>Sign Up</h1>
+      <form>
+
+        <input type="email" id="email" placeholder="email" size="25">
+
+        <input type="password" id="password" placeholder="password" size="25">
+        <input type="submit" value="Submit" id="as"/>
+      </form>
+        <div class="nav">
+
+
+
+        </div>
         <div>
-        <input type="email" name="email" id="email">
-        <label for="">Email</label>
+          
+
+          <button class="sgn"><a href="./signin.html">Sign In Here</a></button>
+
+
+    
     </div>
+
+  </div>
+  <div>
+  
     <div>
-        <input type="password" placeholder="password" name="" id="password">
-        <label for="">password</label>
+    
+      <video class="prm-video" autoplay="" muted="" loop="" aria-label="Rocking Chairs" data-content-type="video"
+        poster="//cb.scene7.com/is/image/Crate/ck_dPLP_20221125_AdultSeatingThm1_v2Poster?wid=800&amp;qlt=50"
+        crossorigin="anonymous" style="aspect-ratio: 800 / ;" preload="metadata" playsinline="">
+        <source src="https://s7d5.scene7.com/is/content/Crate/Video/ck_dPLP_20221125_AdultSeatingThm1_v2.mp4">
+      </video>
+      <p>Babyletto Kiwi Nursery Glider Recliner Chair w/ Electronic Control and USB Performance Cream with Natural Wood
+        Base
+      </p>
     </div>
-        <input type="submit" value="Sign up">
-    </form>
+  </div>
+
+
+
+
+
+
+  </div>
 </body>
-<script src="./signup.js"></script>
+<script>
+  let formda = document.querySelector("form")
+
+  let emailda = document.getElementById("email")
+  let passwordda = document.getElementById("password")
+
+  let array = JSON.parse(localStorage.getItem("account-data")); // Step:-2
+
+  if (array == null) {
+    array = []; // Step:- 3
+  }
+  formda.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let data = {
+      email: emailda.value,
+      password: passwordda.value
+    };
+    array.push(data);
+
+    localStorage.setItem("account-data", JSON.stringify(array)); // Step:-1
+
+  });
+
+
+</script>
 
 </html>

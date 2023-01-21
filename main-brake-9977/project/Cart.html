@@ -5,26 +5,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>products</title>
-    <link rel="stylesheet" href="./product.css">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./Cart.css">
     <style>
-        .lgn,
-        .sgn {
-            color: black;
+        #Cart-main {
+            display: flex;
+            width: 95%;
+            border: 2px solid red;
+            margin: auto;
         }
 
-        .sgn:hover,
-        .lgn:hover {
-            text-decoration: underline;
+        #cart-conatiner {
+            width: 70%;
+
         }
 
-        #nav {
-            position: sticky;
-            top:-9px;
-            background: #fff;
+        #cart-conatiner>div {
+            border: 2px solid black;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+
         }
-        .checked{
-            padding: 0px 0px 0px 0px;
+
+        #cart-conatiner h4,
+        h3,
+        p {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #cart-conatiner>div>img {
+            width: 30%;
+        }
+
+
+        #btn {
+            margin-left: 10px;
+            width: 70px;
+            height: 40px;
+        }
+
+     
+
+        #Cart-totalamount {
+            font-weight: bold;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 5px;
+            margin-left: 20px;
+            margin-top: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            height: 351px;
+
+        }
+
+        #Cart-totalamount>div {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        #Cart-totalamount>button {
+            width: 100%;
+            font-size: 30px;
+            padding-bottom: 10px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            color: antiquewhite;
+            border: none;
+
+        }
+
+        #Checkoutbtn {
+            color: antiquewhite;
+        }
+
+        #price {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -52,7 +111,8 @@
         <div id="images">
             <div>
 
-                <h4><a href="./signup.html" class="checked"><span class="sgn"> SignUp </span></a>OR<a href="./signin.html"><span class="lgn"> SignIn </span></a>
+                <h4><a href="./signup.html" class="checked"><span class="sgn"> SignUp </span></a>OR<a
+                        href="./signin.html"><span class="lgn"> SignIn </span></a>
                 </h4>
 
             </div>
@@ -88,12 +148,13 @@
                     <img src="https://t4.ftcdn.net/jpg/05/39/36/93/240_F_539369369_NQJTCTORsrkM6EbyacZDN2cPeYwoJ8e3.jpg "
                         alt="" class="fav">
 
-                    <a href="" class="sgn"><span> <b>Wishlsit</b></span></a>
+                    <a href="" class="sgn"><span> <b>0</b></span></a>
 
                 </a>
             </div>
         </div>
     </div>
+
     <div id="feature-bar-white">
 
         <a href="">
@@ -258,151 +319,82 @@
         </ul>
     </nav>
 
-    <div id="dicription">
+    <p id="Cartcount">CART(<span id="countcart">0</span>)</p>
+    <div id="Cart-main">
+        <div id="cart-conatiner">
 
-        <h4>
-            FIRST LOOK: SPRING NEW ARRIVALS
-            Shop hundreds of new and in-stock items for spring
+
+
+
+
+        </div>
+        <div id="Cart-totalamount">
+            <h1>Order Summary</h1>
             <hr>
-            <h4>
-    </div>
-    <div id="Furniture-img">
-        <div>
-            <img src="./sofa.png" alt="">
-            <h5>Living Room Furniture ></h5>
+            <div>
+                <p>Subtotal</p>
+                <p id="price"> </p>
+            </div>
+            <div>
+                <p>Shipping price</p>
+                <p id="Shippingprice" style="color: red; font-weight:bold;">+$100</p>
+            </div>
+            <hr>
+            <div>
+                <p>Total</p>
+                <p id="toatlamount" style="font-weight: bold;"></p>
+            </div>
+            <button><a href="" id="Checkoutbtn"> <b> Checkout</b></a></button>
         </div>
-        <div>
-            <img src="./table.png" alt="">
-            <h5>Dining Room Furniture ></h5>
-        </div>
-        <div>
-            <img src="./storage.png" alt="">
-            <h5>Storage Furniture ></h5>
-        </div>
-        <div>
-            <img src="./bed.png" alt="">
-            <h5>Bedroom Furniture ></h5>
-        </div>
-        <div>
-            <img src="./office.png" alt="">
-            <h5>Home Office Furniture ></h5>
-        </div>
-    </div>
-
-
-    <div id="Sorting">
-
-        <div>
-            <form>
-                <input placeholder="Search" type="text" id="search" />
-                <input type="submit" value="Search Product" />
-            </form>
-            <a href="">
-                <button>View All</button>
-            </a>
-            <a href="">
-                <button>Ready To ship</button>
-            </a>
-        </div>
-        <div>
-            <h5>Items:-<span id="Spn">0</span></h5>
-            <select id="sort">
-                <option value="">Most Relavent</option>
-                <option value="asc"> ⏶Price Low to High</option>
-                <option value="desc">⏷Price High to Low</option>
-            </select>
-        </div>
-      
 
     </div>
-    <div id="container">
-
-    </div>
-    <div id="FAQ">
-        <div id="CONATAINER-1">
-            <div>
-                <div> <img src="./call.png" alt="">
-                </div>
-                <div>
-                    <h4>Contact Us</h4>
-                    <p>Phone No:-0712-2552258381</p>
-                    <p>Mon-Fri:8am -8pm</p>
-                    <p>Sat-Sun:8am-7pm</p>
-                </div>
-            </div>
-            <div>
-                <div> <img src="./card.png" alt=""></div>
-                <div>
-                    <h4>Valuxe Credit Card</h4>
-                    <p>Earn Reward Dollars every time you shop* (excluding special financing purchases), plus get access
-                        to special offers and events.</p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="./order.png" alt="">
-                </div>
-                <div>
-                    <h4>Order Tracking & Schedule Delivery</h4>
-                    <p>Find out when your online purchase will arrive or schedule a delivery.
-                        Track Your Order
-                        Schedule Delivery</p>
-                </div>
-            </div>
-            <div>
-                <img src="./&.png" alt="">
-                <h2>THE WEDDING REGISTRY</h2>
-            </div>
-        </div>
-        <hr>
-        <div id="CONATAINER-2">
-            <div>
-                <h4>Our Campany</h4>
-                <p>About us</p>
-                <p>Careers</p>
-                <p>Responsible design</p>
-                <p>store Location and Events</p>
-            </div>
-            <div>
-                <h4>Resources</h4>
-                <p>Customer Service</p>
-                <p>Account</p>
-                <p>Return Policy</p>
-                <p>Shipping Information</p>
-                <p>Email and Text Preferences</p>
-                <p>Gift Cards</p>
-                <p>Catalogs</p>
-                <p>Product Recalls</p>
-                <p>Accessibility Statement</p>
-                <p>CA Supply Chains Act</p>
-                <p>Do Not Sell My Personal Information</p>
-                <p>Cookie Settings</p>
-            </div>
-            <div>
-                <h4>Shopping App</h4>
-                <p>Try our View in Your Room feature, manage registries and save payment info.</p>
-                <img src="./apple.png" alt="">
-            </div>
-            <div>
-                <h4>Social Media</h4>
-                <img src="./social media.png" alt="">
-                <p>Show us your look with: </p>
-                <p>#CrateStyle</p>
-                <p>#CrateKidsStyle</p>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-    </div>
-
 </body>
-   <script src="./product.js"></script>
+<script>
+    let Car =JSON.parse(localStorage.getItem("buy"))||[]
+    console.log(Car) 
+    if(Car==null){
+        Car=[]
+    }
+    let count = document.getElementById("countcart")
+    let subcount = document.getElementById("price")
+    let totalcount = document.getElementById("toatlamount")
+    let spncart=document.getElementsByClassName("checked")
+
+    function Display(data) {
+        let Cont = document.getElementById("cart-conatiner")
+        Cont.innerHTML = ""
+        let sum = 0
+        data.forEach((element, index) => {
+            let Card = document.createElement("div")
+            let Image = document.createElement("img")
+            let Price = document.createElement("h4")
+            let Description = document.createElement("p")
+            let Category = document.createElement("h3")
+            let Button = document.createElement("button");
+            let incre = document.createElement("button");
+            let dec = document.createElement("button");
+            let spnbutton = document.createElement("span")
+            incre.innerText = "+"
+            dec.innerText = "-"
+            Button.innerText = "Remove"
+            Button.setAttribute("id", "btn")
+            spnbutton.innerText = element.quantity;
+            Image.src = element.avatar;
+            Description.innerText = element.description;
+            Price.innerText = "$" + element.price
+            Category.innerText = element.category;
+            sum += element.price
+            Card.append(Image, Description, Price, Category, incre, spnbutton, dec, Button)
+            Cont.append(Card)
+        });
+        subcount.innerText = "$" + sum
+        totalcount.innerText = "$" + (sum + 100)
+        count.innerText = data.length
+    }
+    Display(Car)
+     
+
+
+</script>
+
 </html>
