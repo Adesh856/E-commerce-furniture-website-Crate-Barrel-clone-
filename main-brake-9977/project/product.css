@@ -12,6 +12,7 @@
 
         #home {
             box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+           
         }
 
         #home>div {
@@ -39,49 +40,42 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        img {
-            width: 20px;
-        }
-
-        #nav {
-
+        img{
+            width:20px;
+            }
+            #nav{
+                position: static;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             display: flex;
             justify-content: space-between;
             height: 70px;
-            position: sticky;
-        }
-
-        #nav>div {
-
-            margin-right: 20px;
-            display: flex;
+            }
+            #nav>div{
+               
+            margin-right:20px ;
+            display: flex;  
             align-items: center;
-
-        }
-
-        #nav>h1 {
+            
+            }
+            #nav>h1{
             font-size: 30px;
-            margin-left: 152px;
-            color: rgb(1, 1, 1);
-
-        }
-
-        #nav>div>div {
-
+             margin-left:152px ;
+             color: rgb(1, 1, 1);
+            
+            }
+            #nav>div>div{
+              
             display: flex;
             align-items: center;
             margin-left: 20px;
             height: 50px;
-
-        }
-
-        #nav>:nth-child(1)>img {
-            width: 100%;
+            
+            }
+            #nav>:nth-child(1)>img{
+            width:100%;
             height: 70px;
-
-        }
-
+            
+            }
         /* //features */
 
         #feature-bar-white>a {
@@ -233,8 +227,7 @@
           margin-bottom:20px ;
         }
         #Sorting h5,form,select,a{
-            
-            padding-right:15px ;
+            padding-right: 5px;
         }
         #container{
             display: grid;
@@ -299,4 +292,11 @@
         #container button{
             color:white;
           background-color: #333;
+          display: block;
+    margin: auto;
+        }
+        #nav {
+            position: sticky;
+            top:-9px;
+            background: #fff;
         }

@@ -15,10 +15,13 @@ function data(para){
     
     }
     data(API)
+    let Buylocatstr=JSON.parse(localStorage.getItem("buy"))||[]
+console.log(Buylocatstr)
 
-let Container=document.getElementById("container")
-let SpanTag=document.getElementById("Spn")
+
 function Display(data){
+    let SpanTag=document.getElementById("Spn")
+    let Container=document.getElementById("container")
     Container.innerHTML=""
 data.forEach((element,index) => {
     let Card =document.createElement("div")
@@ -33,6 +36,10 @@ data.forEach((element,index) => {
     Description.innerText=element.description;
     Price.innerText="$"+element.price
     Category.innerText=element.category;
+    Anchor.addEventListener("click",()=>{
+         Buylocatstr.push({...element,quantity:1})
+         localStorage.setItem("buy",JSON.stringify(Buylocatstr))
+        })
     Anchor.append(Button)
     Card.append(Image,Description,Price,Category,Anchor)
     Container.append(Card)
