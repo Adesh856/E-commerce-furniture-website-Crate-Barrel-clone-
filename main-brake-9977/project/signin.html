@@ -57,8 +57,8 @@
 
     .sgn {
       border-radius: 6px;
-      font-size: 12px;
-      margin-left: 50px;
+      font-size: 10px;
+      margin-left: 100px;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       margin-top: 10px;
       border: none;
@@ -85,6 +85,7 @@
       background-color: rgba(0, 0, 0, 0.738);
       color: white;
       width: 100%;
+      
     }
     input[type="submit"]{
         margin:10px 0px 52px 15px;
@@ -163,42 +164,32 @@
 <script>
     
    
-   function Checked(){
-    let Lsdata=JSON.parse(localStorage.getItem("account-data"))||[]
-   
-    let head=document.getElementById("heading")
-    let eml=document.getElementById("email")
-    let ps=document.getElementById("password")
-    let flag=0;
-    let flag2=0
+  let Lsdata=JSON.parse(localStorage.getItem("account-data"))
+     
+  let formta=document.querySelector("form")
+  let head=document.getElementById("heading")
+  let eml=document.getElementById("email")
+  let ps=document.getElementById("password")
+  formta.addEventListener("submit",(e)=>{
+    let flag=0
+   e.preventDefault()
     Lsdata.forEach((ele,index)=>{
-       if((ele.email==eml.value&&ele.password==ps.value)||(eml.value.length!=0&&ps.value.length!=0)){
+     if(ele.email==eml.value&&ele.password==ps.value){
        flag=1
-      }else if(eml.value.length==0&&ps.value.length==0){
-        flag2=1
-      }
-     }) 
-     console.log(flag)
-     console.log(flag2)
+     }
+    })
     if(flag==1){
-      window.location.assign("index.html")
-    }else if(flag2=1){
-      head.innerText="Invalid Credential"
+      window.location.assign("./index.html")
+    } else{
+      head.innerText="Invalid Credentials"
     }
-    else{
-      head.innerText="Invalid Credential"
-    }
-    eml.value=null;
-    ps.value=null;
-   }
+    eml.value=""
+    ps.value=""
+  })
 
 
 
-   let formta=document.getElementById("datafrm")
-   formta.addEventListener("submit",(e)=>{
-    e.preventDefault()
-    Checked()
-   })
+  
 </script>
 
 
