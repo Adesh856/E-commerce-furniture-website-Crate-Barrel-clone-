@@ -25,7 +25,7 @@
         
             display: flex;
             width: 100%;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             margin-top: 10px;
            
@@ -95,6 +95,7 @@
 </head>
 
 <body>
+    <a href="./product.html"></a>
     <div id="home">
         <div>
             <a href="./main.html" style="margin-left:20px">
@@ -110,7 +111,7 @@
         </div>
     </div>
     <div id="nav">
-        <a href="./main.html">
+        <a href="./index.html">
             <img src="./Valuxe (3).png" alt="">
         </a>
         <h1>V&F</h1>
@@ -136,7 +137,7 @@
                 <a href="./Cart.html">
                     <img src="https://cdn-icons-png.flaticon.com/512/1251/1251022.png?w=740&t=st=1674022874~exp=1674023474~hmac=0cf8f33d6cd462c7ca1eb508440b35ef2d30ef18b1f43d2895c5e9af8c50b4e1 "
                         alt="" class="cart">
-                    <a href="./Cart.html" class="sgn"><span class="checked">0</span></a>
+                    <a href="./Cart.html" class="sgn"><span id="Count2cart">0</span></a>
                 </a>
             </div>
             <div>
@@ -154,7 +155,7 @@
                     <img src="https://t4.ftcdn.net/jpg/05/39/36/93/240_F_539369369_NQJTCTORsrkM6EbyacZDN2cPeYwoJ8e3.jpg "
                         alt="" class="fav">
 
-                    <a href="" class="sgn"><span> <b>0</b></span></a>
+                    <a href="" class="sgn"><span > <b>0</b></span></a>
 
                 </a>
             </div>
@@ -350,7 +351,7 @@
                 <p>Total</p>
                 <p id="toatlamount" style="font-weight: bold;"></p>
             </div>
-            <button><a href="" id="Checkoutbtn"> <b> Checkout</b></a></button>
+            <button><a href="./Clickpage.html" class="Checkoutbtn"> <b> Checkout</b></a></button>
         </div>
 
     </div>
@@ -362,6 +363,7 @@
         Car=[]
     }
     let count = document.getElementById("countcart")
+    let count2 = document.getElementById("Count2cart")
     let subcount = document.getElementById("price")
     let totalcount = document.getElementById("toatlamount")
     let spncart=document.getElementsByClassName("checked")
@@ -414,6 +416,7 @@
         subcount.innerText = "$" + sum
         totalcount.innerText = "$" + (sum + 100)
         count.innerText = data.length
+        count2.innerText=data.length
     }
     Display(Car)
      

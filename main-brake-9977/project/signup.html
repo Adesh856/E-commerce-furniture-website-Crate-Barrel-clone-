@@ -85,6 +85,7 @@
       font-size: 12px;
       background-color: rgba(0, 0, 0, 0.738);
       color: white;
+      width: 100%;
     }
 
     #signup>h1 {
@@ -109,7 +110,9 @@
     padding-top: 10px;
    }
    input[type="submit"]{
-    margin:-3px 0px 52px 7px;
+    margin:10px 0px 52px 15px;
+    width: 100%;
+    cursor: pointer;
 }
 
   </style>
@@ -129,7 +132,7 @@
         <input type="email" id="email" placeholder="email" size="25">
 
         <input type="password" id="password" placeholder="password" size="25">
-        <input type="submit" value="Submit" id="as"/>
+        <input type="submit" value="Sign Up" id="as"/>
       </form>
         <div class="nav">
 
@@ -175,7 +178,6 @@
   let passwordda = document.getElementById("password")
 
   let array = JSON.parse(localStorage.getItem("account-data")); // Step:-2
-
   if (array == null) {
     array = []; // Step:- 3
   }
@@ -186,7 +188,6 @@
       password: passwordda.value
     };
     array.push(data);
-
     localStorage.setItem("account-data", JSON.stringify(array)); // Step:-1
 
   });

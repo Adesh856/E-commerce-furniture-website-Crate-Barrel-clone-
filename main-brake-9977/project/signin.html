@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign up Page</title>
+  <title>Sign In Page</title>
   <style>
     label {
       padding-bottom: 10px;
@@ -85,9 +85,11 @@
       font-size: 12px;
       background-color: rgba(0, 0, 0, 0.738);
       color: white;
+      width: 100%;
     }
     input[type="submit"]{
-        margin:-3px 0px 52px 7px;
+        margin:10px 0px 52px 15px;
+        width: 100%;
     }
     #signup>h1 {
       text-align: center;
@@ -96,7 +98,6 @@
       width: 100%;
     }
    .log{
-
     width: 40%;
   justify-content: center;
    }
@@ -128,12 +129,10 @@
     <div id="signup">
       <h1>Sign In</h1>
       <h2 id="heading"></h2>
-      <form>
-
+      <form id="datafrm">
         <input type="email" id="email" placeholder="email" size="25">
-
         <input type="password" id="password" placeholder="password" size="25">
-        <input type="submit" value="Submit" size="25" />
+        <input type="submit" value="Sign In"/>
       </form>
         <div class="nav">
         </div>
@@ -163,24 +162,43 @@
   </div>
 
 <script>
-    let Lsdata=JSON.parse(localStorage.getItem("account-data"))
-     let A=true
-   let formta=document.querySelector("form")
-   let head=document.getElementById("heading")
-   let eml=document.getElementById("email")
-   let ps=document.getElementById("password")
-   formta.addEventListener("submit",(e)=>{
-    e.preventDefault()
-    let newdata=Lsdata.forEach((ele,index)=>{
-      if(ele.email!=eml.value||ele.password!=ps.value){
-         head.innerText="Invalid Credentias"
-      }else if(ele.email==eml.value&&ele.password==ps.value){
-        window.location.assign("./main.html")
-      }else if(ele.email!=eml.value&&ele.password!=ps.value){
-        head.innerText="Invalid Credentias"
+    
+   
+   function Checked(){
+    let Lsdata=JSON.parse(localStorage.getItem("account-data"))||[]
+   
+    let head=document.getElementById("heading")
+    let eml=document.getElementById("email")
+    let ps=document.getElementById("password")
+    let flag=0;
+    let flag2=0
+    Lsdata.forEach((ele,index)=>{
+       if((ele.email==eml.value&&ele.password==ps.value)||(eml.value.length!=0&&ps.value.length!=0)){
+       flag=1
+      }else if(eml.value.length==0&&ps.value.length==0){
+        flag2=1
       }
      }) 
-    
+     console.log(flag)
+     console.log(flag2)
+    if(flag==1){
+      window.location.assign("index.html")
+    }else if(flag2=1){
+      head.innerText="Invalid Credential"
+    }
+    else{
+      head.innerText="Invalid Credential"
+    }
+    eml.value=null;
+    ps.value=null;
+   }
+
+
+
+   let formta=document.getElementById("datafrm")
+   formta.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    Checked()
    })
 </script>
 
