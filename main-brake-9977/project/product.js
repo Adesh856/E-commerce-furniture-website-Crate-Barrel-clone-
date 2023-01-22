@@ -37,8 +37,13 @@ data.forEach((element,index) => {
     Price.innerText="$"+element.price
     Category.innerText=element.category;
     Anchor.addEventListener("click",()=>{
-         Buylocatstr.push({...element,quantity:1})
-         localStorage.setItem("buy",JSON.stringify(Buylocatstr))
+        if(chechDuplicate(element)){
+            alert("Product Already in Cart")
+          }else{
+            Buylocatstr.push({...element,quantity:1})
+           localStorage.setItem("buy",JSON.stringify(Buylocatstr))
+           alert("Product Added To Cart")
+          }
         })
     Anchor.append(Button)
     Card.append(Image,Description,Price,Category,Anchor)
@@ -47,6 +52,26 @@ data.forEach((element,index) => {
 SpanTag.innerText=data.length
 
 }
+//duplicate
+
+function chechDuplicate(ele){
+    
+    for(let i=0;i<=Buylocatstr.length-1;i++){
+      if(Buylocatstr[i].id==ele.id){
+        return true
+      }
+    }
+     return false
+     }
+
+
+
+
+
+
+
+
+
 
 
 ///Filter 

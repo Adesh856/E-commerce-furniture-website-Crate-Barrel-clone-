@@ -294,6 +294,7 @@
           background-color: #333;
           display: block;
     margin: auto;
+       cursor: pointer;
         }
         #nav {
             position: sticky;
