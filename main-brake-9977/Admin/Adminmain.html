@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin main Page</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: white
+        }
+
+        .contain {
+
+            width: 100%;
+            font-size: 10px;
+            color: white;
+            display: flex;
+        }
+
+        .left {
+            width: 15%;
+            border: 2px solid #343a40;
+            text-align: center;
+            background-color: #343a40;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            position: sticky;
+            left: 0px;
+        }
+
+        .left button,
+        .left a {
+            width: 100%;
+            font-size: 18px;
+            text-decoration: none;
+            color: azure;
+            background-color: #343a40;
+            border: none;
+
+        }
+
+        .left img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .left>div {
+            margin-top: 20px;
+        }
+
+        .right {
+            width: 100%;
+        }
+
+        input[type="search"] {
+            color: #343a40;
+            background-color: #343a40;
+        }
+
+        input[type="submit"] {
+            color: #343a40;
+            background-color: #343a40;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .nav{
+            display: flex;
+            border: 2px solid red;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="left">
+            <div>
+                <h1>V&F</h1>
+                <hr>
+                <h2>AdminLTE 1</h2>
+            </div>
+            <hr>
+            <div>
+                <img src="http://shreebharaticollege.org.in/wp-content/uploads/2020/08/dummy-image.png" alt="">
+                <h4>Alex Hame</h4>
+            </div>
+            <hr>
+            <div>
+                <form action="">
+                    <input type="search" name="Search" id="">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+            <div>
+                <button><a href="">Dashboard</a></button>
+            </div>
+            <div>
+                <button><a href="">Product On site</a></button>
+            </div>
+            <div>
+                <button><a href="">Ordered Product List</a></button>
+            </div>
+            <div>
+                <button><a href="">Add new product</a></button>
+            </div>
+            <div>
+                <button><a href="">Order Management</a></button>
+            </div>
+            <div>
+                <button><a href="">Manage Quantities</a></button>
+            </div>
+            <div>
+                <button><a href="">User Management</a></button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="nav">
+                <!-- left -->
+                <div>
+                    <a href="">Home</a>
+                    <a href="">Contact</a>
+                </div>
+                <!-- right -->
+                <div id="grd">
+                    <img src="./admin/Screenshot 2023-01-22 204439.png" alt="">
+                    <img src="./admin/we.png" alt="">
+                    <img src="./admin/cross.png" alt="">
+                    <img src="./admin/box.png" alt="">
+                </div>
+            </div>
+           <div>
+            <div class="main-grid1">
+                <div>
+                    <h1>150</h1>
+                    <h3>New Order</h3>
+                    <button>More info ➜</button>
+                </div>
+                <div>
+                    <h1>150</h1>
+                    <h3>New Order</h3>
+                    <button>More info ➜</button>
+                </div><div>
+                    <h1>150</h1>
+                    <h3>Bounce Rate</h3>
+                    <button>More info ➜</button>
+                </div>
+                <div>
+                    <h1>150</h1>
+                    <h3>User Registrations</h3>
+                    <button>More info ➜</button>
+                </div>
+                <div>
+                    <h1>150</h1>
+                    <h3>Unique Visitors</h3>
+                    <button>More info ➜</button>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+
+</html>

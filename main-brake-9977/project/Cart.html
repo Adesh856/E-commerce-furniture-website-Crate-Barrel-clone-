@@ -11,9 +11,9 @@
         #Cart-main {
             display: flex;
             width: 95%;
-           
+        
             margin: auto;
-            
+            margin-bottom:20px ;
         }
 
         #cart-conatiner {
@@ -90,6 +90,46 @@
         }
         #cart-conatiner{
         background-color: #fff;
+        }
+        #FAQ{
+       
+            background: #333;
+        }
+        #CONATAINER-1{
+            
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            color: white;
+            width: 80%;
+            margin: auto;
+            font-size: 10px;
+            gap: 10px;
+            text-align: start;
+            padding-top: 10px;
+        }
+        #CONATAINER-1 img{
+            width: 20%;
+        }
+        #CONATAINER-2{
+          
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            color: white;
+            width: 80%;
+            margin: auto;
+            font-size: 10px;
+            gap: 10px;
+            text-align:start;
+            
+        }
+        #CONTAINER-2>div{
+            font-weight: 4px;
+        }
+        #CONATAINER-2 img{
+            width: 60%;
+        }
+        #FAQ{
+            margin: 0px;
         }
     </style>
 </head>
@@ -355,6 +395,93 @@
         </div>
 
     </div>
+        <!-- FAQ -->
+        <div id="FAQ">
+            <div id="CONATAINER-1">
+                <div>
+                    <div> <img src="./call.png" alt="">
+                    </div>
+                    <div>
+                        <h4>Contact Us</h4>
+                        <p>Phone No:-0712-2552258381</p>
+                        <p>Mon-Fri:8am -8pm</p>
+                        <p>Sat-Sun:8am-7pm</p>
+                    </div>
+                </div>
+                <div>
+                    <div> <img src="./card.png" alt=""></div>
+                    <div>
+                        <h4>Valuxe Credit Card</h4>
+                        <p>Earn Reward Dollars every time you shop* (excluding special financing purchases), plus get access
+                            to special offers and events.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="./order.png" alt="">
+                    </div>
+                    <div>
+                        <h4>Order Tracking & Schedule Delivery</h4>
+                        <p>Find out when your online purchase will arrive or schedule a delivery.
+                            Track Your Order
+                            Schedule Delivery</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./&.png" alt="">
+                    <h2>THE WEDDING REGISTRY</h2>
+                </div>
+            </div>
+            <hr>
+            <div id="CONATAINER-2">
+                <div>
+                    <h4>Our Campany</h4>
+                    <p>About us</p>
+                    <p>Careers</p>
+                    <p>Responsible design</p>
+                    <p>store Location and Events</p>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <p>Customer Service</p>
+                    <p>Account</p>
+                    <p>Return Policy</p>
+                    <p>Shipping Information</p>
+                    <p>Email and Text Preferences</p>
+                    <p>Gift Cards</p>
+                    <p>Catalogs</p>
+                    <p>Product Recalls</p>
+                    <p>Accessibility Statement</p>
+                    <p>CA Supply Chains Act</p>
+                    <p>Do Not Sell My Personal Information</p>
+                    <p>Cookie Settings</p>
+                </div>
+                <div>
+                    <h4>Shopping App</h4>
+                    <p>Try our View in Your Room feature, manage registries and save payment info.</p>
+                    <img src="./apple.png" alt="">
+                </div>
+                <div>
+                    <h4>Social Media</h4>
+                    <img src="./social media.png" alt="">
+                    <p>Show us your look with: </p>
+                    <p>#CrateStyle</p>
+                    <p>#CrateKidsStyle</p>
+                </div>
+            </div>
+    
+          
+    
+    
+    
+    
+    
+    
+    
+    
+        </div>
+    
+    
 </body>
 <script>
     let Car =JSON.parse(localStorage.getItem("buy"))||[]
