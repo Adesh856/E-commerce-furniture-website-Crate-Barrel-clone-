@@ -11,22 +11,24 @@
         #Cart-main {
             display: flex;
             width: 95%;
-            border: 2px solid red;
+           
             margin: auto;
+            
         }
 
         #cart-conatiner {
             width: 70%;
-
+ 
         }
 
         #cart-conatiner>div {
-            border: 2px solid black;
+        
             display: flex;
             width: 100%;
             justify-content: center;
             align-items: center;
             margin-top: 10px;
+           
 
         }
 
@@ -39,6 +41,7 @@
 
         #cart-conatiner>div>img {
             width: 30%;
+            margin-right: 10px;
         }
 
 
@@ -58,7 +61,7 @@
             margin-top: 10px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             height: 351px;
-
+            width: 30%;
         }
 
         #Cart-totalamount>div {
@@ -84,6 +87,9 @@
 
         #price {
             font-weight: bold;
+        }
+        #cart-conatiner{
+        background-color: #fff;
         }
     </style>
 </head>
@@ -383,7 +389,25 @@
             Description.innerText = element.description;
             Price.innerText = "$" + element.price
             Category.innerText = element.category;
-            sum += element.price
+            Button.addEventListener("click",()=>{
+                data=data.filter((ele)=>{
+                  return ele.id!=element.id
+                })
+                localStorage.setItem("buy",JSON.stringify(data))
+                Display(data)
+              })
+              incre.addEventListener("click",()=>{
+                element=element.quantity++
+                localStorage.setItem("buy",JSON.stringify(data))
+                Display(data)
+              })
+            dec.addEventListener("click",()=>{
+                element=element.quantity--
+                localStorage.setItem("buy",JSON.stringify(data))
+                Display(data)
+              })
+
+            sum += element.price*element.quantity
             Card.append(Image, Description, Price, Category, incre, spnbutton, dec, Button)
             Cont.append(Card)
         });
