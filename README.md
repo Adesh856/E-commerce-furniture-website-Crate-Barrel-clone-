@@ -1,6 +1,6 @@
 # Valuxe - Crate & Barrel Ecommerce Furniture Clone
 
-Valuxe is an ecommerce furniture clone website inspired by Crate & Barrel. It is a project developed using HTML, CSS, and JavaScript only, without any external libraries. The website aims to replicate the core functionalities of Crate & Barrel, allowing users to browse furniture, search for products, filter by price, add items to the cart, sign up for an account, and log in.
+Valuxe is an ecommerce furniture clone website inspired by Crate & Barrel. It is a solo project developed  in a time span of 5 days using HTML, CSS, and JavaScript only, without any external libraries. The website aims to replicate the core functionalities of Crate & Barrel, allowing users to browse furniture, search for products, filter by price, add items to the cart, sign up for an account, and log in
 
 ## Technology
 
